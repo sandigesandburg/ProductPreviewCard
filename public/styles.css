@@ -1,0 +1,155 @@
+:root {
+  --border-radius: 0.75rem;
+  font-size: 14px;
+}
+
+body {
+  align-items: center;
+  background: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.product-card {
+  background: hsl(0, 0%, 100%);
+  border-radius: var(--border-radius);
+  box-shadow: 0.1rem 0.1rem 0.5rem rgb(227, 227, 227);
+  display: flex;
+  flex-wrap: wrap;
+  height: 32.15rem;
+  width: 43rem;
+}
+
+.product-image {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  height: 100%;
+  width: 50%;
+}
+
+.product-details {
+  height: 100%;
+  width: 50%;
+}
+
+.product-details > * {
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+}
+
+.product-category {
+  color: hsl(228, 12%, 48%);
+  font-family: 'Montserrat';
+  font-size: 0.86rem;
+  letter-spacing: 0.35rem;
+  margin-top: 2.3rem;
+  text-transform: uppercase;
+}
+
+.product-name {
+  color: hsl(212, 21%, 14%);
+  font-family: 'Fraunces';
+  font-weight: 700;
+  font-size: 2.25em;
+  line-height: 2.32rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0;
+}
+
+.product-description {
+  color: hsl(228, 12%, 48%);
+  font-family: 'Montserrat';
+  line-height: 1.64rem;
+  margin-top: 1.65rem;
+}
+
+.price-wrapper {
+  align-items: center;
+  column-gap: 1.3em;
+  display: flex;
+  margin-top: 1.8rem;
+}
+
+.current-price {
+  color: hsl(158, 36%, 37%);
+  font-family: 'Fraunces';
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.old-price {
+  color: hsl(228, 12%, 48%);
+  font-family: 'Montserrat';
+  font-size: 0.95rem;
+  text-decoration: line-through;
+}
+
+.add-to-cart {
+  align-items: center;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 0.5rem;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  display: flex;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  gap: 0.8rem;
+  height: 3.45rem;
+  justify-content: center;
+  letter-spacing: 0.04rem;
+  margin-top: 1.88rem;
+  width: 16.9rem;
+}
+
+.add-to-cart:active {
+  background-color: hsl(158, 43%, 24%);
+}
+
+@media only screen and (max-width: 600px) {
+  .product-card {
+    margin-top: 0.8rem;
+    width: 24.5rem;
+    height: 43.8rem;
+  }
+
+  .product-image {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    content: url('../src/images/image-product-mobile.jpg');
+    width: 100%;
+    height: 17.2rem;
+  }
+
+  .product-details {
+    height: 100%;
+    width: 24.5rem;
+  }
+
+  .product-details > * {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+  }
+
+  .product-category {
+    margin-top: 1.65rem;
+  }
+
+  .product-name {
+    margin-top: 0.8rem;
+  }
+
+  .product-description {
+    margin-top: 1.1rem;
+  }
+
+  .price-wrapper {
+    margin-top: 1.45rem;
+  }
+
+  .add-to-cart {
+    margin-top: 1.15rem;
+    width: 21.1rem;
+  }
+}
